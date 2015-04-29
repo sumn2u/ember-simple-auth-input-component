@@ -1,6 +1,6 @@
 {
-  "name": "ember-simple-auth",
-  "version": "0.8.0-beta.2",
+  "name": "ember-simple-auth-custom-mars",
+  "version": "0.8.0-beta.2.CUSTOM",
   "main": [
     "./simple-auth.js",
     "./simple-auth.amd.js",
