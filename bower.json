@@ -1,6 +1,6 @@
 {
-  "name": "ember-simple-auth-input",
-  "version": "0.8.0",
+  "name": "ember-simple-auth-input-v4",
+  "version": "0.8.1",
   "main": [
     "./simple-auth.js",
     "./simple-auth.amd.js",
@@ -17,5 +17,23 @@
   ],
   "dependencies": {
     "ember": ">=1.2"
-  }
+  },
+  "homepage": "https://github.com/sumn2u/ember-simple-auth-input-component",
+  "authors": [
+    "suman <sumn2u@hotmail.com>"
+  ],
+  "description": "",
+  "moduleType": [],
+  "keywords": [
+    "suman",
+    "kunwar"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

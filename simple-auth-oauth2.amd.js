@@ -8,7 +8,7 @@
 
 Ember.libraries.register('Ember Simple Auth OAuth 2.0', '0.8.0');
 
-define("simple-auth-oauth2/authenticators/oauth2", 
+define("simple-auth-oauth2/authenticators/oauth2",
   ["simple-auth/authenticators/base","./../configuration","exports"],
   function(__dependency1__, __dependency2__, __exports__) {
     "use strict";
@@ -194,16 +194,16 @@ define("simple-auth-oauth2/authenticators/oauth2",
                 //==========
                 var inputFormatObject = _this.authenticationInputFormat;
                 // instead of this, use a parsing function
-                console.log("inputFormatObject", inputFormatObject, Ember.typeOf(inputFormatObject), options);
+                // console.log("inputFormatObject", inputFormatObject, Ember.typeOf(inputFormatObject), options);
                 if (!Ember.isEmpty(inputFormatObject) && Ember.typeOf(inputFormatObject) === "object") {
                   var formAttributes = inputFormatObject.formAttributes;
 
-                  console.log("formAttributes", formAttributes, !Ember.isEmpty(formAttributes), Ember.typeOf(formAttributes));
+                  // console.log("formAttributes", formAttributes, !Ember.isEmpty(formAttributes), Ember.typeOf(formAttributes));
 
                   if (!Ember.isEmpty(formAttributes) && Ember.typeOf(formAttributes) === "array") {
                     data = {}; //ignore any attribute that has been set before
                     formAttributes.forEach(function(attribute) {
-                      console.log("formAttributes", attribute);
+                      // console.log("formAttributes", attribute);
                       if (!Ember.isEmpty(options[attribute])) {
                         data[attribute] = options[attribute];
 
@@ -213,12 +213,12 @@ define("simple-auth-oauth2/authenticators/oauth2",
 
                 var headers = inputFormatObject.headers;
 
-                console.log("headers", headers, !Ember.isEmpty(headers), Ember.typeOf(headers));
+                // console.log("headers", headers, !Ember.isEmpty(headers), Ember.typeOf(headers));
 
                 if (!Ember.isEmpty(headers) && Ember.typeOf(headers) === "array") {
                   var headerData = {};
                   headers.forEach(function(attribute) {
-                    console.log("headers", attribute);
+                    // console.log("headers", attribute);
                     if (!Ember.isEmpty(options[attribute])) {
                       headerData[attribute] = options[attribute];
                     }
@@ -413,7 +413,7 @@ define("simple-auth-oauth2/authenticators/oauth2",
       }
     });
   });
-define("simple-auth-oauth2/authorizers/oauth2", 
+define("simple-auth-oauth2/authorizers/oauth2",
   ["simple-auth/authorizers/base","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
@@ -454,7 +454,7 @@ define("simple-auth-oauth2/authorizers/oauth2",
       }
     });
   });
-define("simple-auth-oauth2/configuration", 
+define("simple-auth-oauth2/configuration",
   ["simple-auth/utils/load-config","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
@@ -530,7 +530,7 @@ define("simple-auth-oauth2/configuration",
       load: loadConfig(defaults)
     };
   });
-define("simple-auth-oauth2/ember", 
+define("simple-auth-oauth2/ember",
   ["./initializer"],
   function(__dependency1__) {
     "use strict";
@@ -540,7 +540,7 @@ define("simple-auth-oauth2/ember",
       Application.initializer(initializer);
     });
   });
-define("simple-auth-oauth2/initializer", 
+define("simple-auth-oauth2/initializer",
   ["./configuration","simple-auth/utils/get-global-config","simple-auth-oauth2/authenticators/oauth2","simple-auth-oauth2/authorizers/oauth2","exports"],
   function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __exports__) {
     "use strict";
